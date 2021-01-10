@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import {Text, View, Image} from 'react-native';
-import profile2 from './profile2.png';
+import profile2 from '../../asset/image/profile2.png';
 
-class MateriFlexBox extends Component {
+
+class FlexBox extends Component {
   render() {
     return (
       <View>
@@ -33,4 +34,4 @@ class MateriFlexBox extends Component {
   }
 }
 
-export default MateriFlexBox;
+export default FlexBox;

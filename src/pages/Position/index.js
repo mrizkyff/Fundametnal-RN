@@ -1,8 +1,8 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
-import profile2 from './profile2.png';
+import profile2 from '../../asset/image/profile2.png';
 
-export default function PositionRN() {
+export default function Position() {
   return (
     <View style={styles.wrapper}>
       <View style={styles.iconWrapper}>
