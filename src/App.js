@@ -1,4 +1,4 @@
-import React , {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, ScrollView} from 'react-native';
 import SampleComponent from './pages/SampleComponent';
 import StylingComponent from './pages/StylingComponent';
@@ -12,9 +12,9 @@ const App = () => {
       setIsShow(false);
     }, 6000);
     return () => {
-      cleanup
-    }
-  }, [])
+      setIsShow(true);
+    };
+  }, []);
   return (
     <View>
       <ScrollView>
@@ -26,7 +26,5 @@ const App = () => {
     </View>
   );
 };
-
-
 
 export default App;
