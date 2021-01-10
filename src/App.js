@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useState, useEffect} from 'react';
 import {View, ScrollView} from 'react-native';
 import SampleComponent from './pages/SampleComponent';
 import StylingComponent from './pages/StylingComponent';
@@ -6,13 +6,22 @@ import FlexBox from './pages/FlexBox';
 import Position from './pages/Position';
 
 const App = () => {
+  const [isShow, setIsShow] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsShow(false);
+    }, 6000);
+    return () => {
+      cleanup
+    }
+  }, [])
   return (
     <View>
       <ScrollView>
-        <SampleComponent />
-        <StylingComponent />
-        <FlexBox />
-        <Position />
+        {/* <SampleComponent />
+        <StylingComponent /> */}
+        {isShow && <FlexBox />}
+        {/* <Position /> */}
       </ScrollView>
     </View>
   );
